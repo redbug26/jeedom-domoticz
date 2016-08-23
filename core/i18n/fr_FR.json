@@ -1,0 +1,10 @@
+{
+    "plugins\/domoticz\/plugin_info\/configuration.php": {
+        "userId": "Utilisateur"
+    },
+    "plugins\/domoticz\/desktop\/modal\/manage.protocole.php": {
+        "Protocole": "Protocole",
+        "Nom": "Nom",
+        "Actif": "Actif"
+    }
+}

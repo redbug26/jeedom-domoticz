@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<info>
+    <id>domoticz</id>
+    <name>Domoticz</name>
+    <description>Plugin pour utiliser Domoticz</description>
+    <icon>fa fa-signal</icon>
+    <licence>AGPL</licence>
+    <author>M.Vanhove</author>
+    <installation>Aucune</installation>
+    <require>1.10</require>
+    <version>0.1</version>
+    <category>automation protocol</category>
+</info>
