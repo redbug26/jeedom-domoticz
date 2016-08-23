@@ -1,5 +1,5 @@
-# jeedom-domoticz
+# Plugin Jeedom for domoticz
 
-![Icon](doc/images/domoticz_icon.png)
+<img src="doc/images/domoticz_icon.png" align="right">
 
-Plugin pour utiliser Domoticz
+Plugin to use your Domoticz box with Jeedom
