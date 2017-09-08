@@ -61,7 +61,7 @@ class domoticz extends eqLogic {
 		$ip = config::byKey('ip', 'domoticz');
 		$port = config::byKey('port', 'domoticz');
 
-		$modules = domoticzGetModules("$ip:$port");
+		$modules = domoticzGetModules($ip, $port);
 
 		return is_array($modules);
 	}
@@ -79,7 +79,7 @@ class domoticz extends eqLogic {
 		$ip = config::byKey('ip', 'domoticz');
 		$port = config::byKey('port', 'domoticz');
 
-		$modules = domoticzGetModules("$ip:$port");
+		$modules = domoticzGetModules($ip, $port);
 
 		$eqLogics = eqLogic::byType('domoticz');
 
@@ -216,7 +216,7 @@ class domoticzCmd extends cmd {
 			$switchCmd = $this->getConfiguration('commandName');
 			$level = 0;
 
-			$retour = domoticzSendCommand("$ip:$port", $idx, $switchCmd, $level);
+			$retour = domoticzSendCommand($ip, $port, $idx, $switchCmd, $level);
 
 			if ($retour->status == "OK") {
 
