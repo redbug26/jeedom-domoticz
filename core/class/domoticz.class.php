@@ -59,8 +59,9 @@ class domoticz extends eqLogic {
 	public static function deamonRunning() {
 
 		$ip = config::byKey('ip', 'domoticz');
+		$port = config::byKey('port', 'domoticz');
 
-		$modules = domoticzGetModules($ip);
+		$modules = domoticzGetModules($ip, $port);
 
 		return is_array($modules);
 	}
@@ -76,8 +77,9 @@ class domoticz extends eqLogic {
 	public static function syncEqLogicWithRazberry($_serverId = 1) {
 
 		$ip = config::byKey('ip', 'domoticz');
+		$port = config::byKey('port', 'domoticz');
 
-		$modules = domoticzGetModules($ip);
+		$modules = domoticzGetModules($ip, $port);
 
 		$eqLogics = eqLogic::byType('domoticz');
 
@@ -209,12 +211,12 @@ class domoticzCmd extends cmd {
 		if ($eqLogic->getConfiguration('SwitchType') == "On/Off") {
 
 			$ip = config::byKey('ip', 'domoticz');
-
+			$port = config::byKey('port', 'domoticz');
 			$idx = $this->getConfiguration('idx');
 			$switchCmd = $this->getConfiguration('commandName');
 			$level = 0;
 
-			$retour = domoticzSendCommand($ip, $idx, $switchCmd, $level);
+			$retour = domoticzSendCommand($ip, $port, $idx, $switchCmd, $level);
 
 			if ($retour->status == "OK") {
 

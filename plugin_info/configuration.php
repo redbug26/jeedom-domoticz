@@ -49,6 +49,12 @@ echo '</div>';
             </div>
         </div>
         <div class="form-group">
+            <label class="col-lg-4 control-label">{{port}}</label>
+            <div class="col-lg-2">
+                <input class="configKey form-control" data-l1key="port" />
+            </div>
+        </div>
+        <div class="form-group">
             <label class="col-lg-4 control-label">{{Debug}}</label>
             <div class="col-lg-8">
                 <a class="btn btn-success bt_sendConfigToDEV"><i class='fa fa-book'></i> {{Envoi la configuration au developpeur}}</a>
