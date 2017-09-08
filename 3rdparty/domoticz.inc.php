@@ -9,7 +9,7 @@ function domoticzGetModules($ip, $decode = 1) {
 
 // http://musicbox.mons.tec-wl.be:8080/json.htm?type=devices&filter=all&used=true&order=Name
 	//
-	$url = "http://" . $ip . ":8080/json.htm?type=devices&filter=all&used=true&order=Name";
+	$url = "http://" . $ip . "/json.htm?type=devices&filter=all&used=true&order=Name";
 
 	$ch = curl_init();
 
@@ -38,7 +38,7 @@ function domoticzGetModules($ip, $decode = 1) {
 
 function domoticzSendCommand($ip, $idx, $switchCmd, $level) {
 
-	$url = sprintf("http://%s:8080/json.htm?type=command&param=switchlight&idx=%d&switchcmd=%s&level=%s", $ip, $idx, $switchCmd, $level);
+	$url = sprintf("http://%s/json.htm?type=command&param=switchlight&idx=%d&switchcmd=%s&level=%s", $ip, $idx, $switchCmd, $level);
 	$jsonData = file_get_contents($url);
 
 	$output = json_decode($jsonData);
